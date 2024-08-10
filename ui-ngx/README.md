@@ -11,11 +11,21 @@
 
     npm run start
 
+## Custom theme style
+https://swimlane.github.io/
 
-## Build
+    /src/theme.scss
+
+## Build UI-NGX
 
     npm run build:prod
 
-## Theme style
+## Build updated docker image
 
-    /src/theme.scss
+    mvn clean install -DskipTests -Ddockerfile.skip=false
+
+## Load new docker image
+
+  1. Check the docker-compose.yml. The image version should use 'latest'. (image: thingsboard/tb-edge:latest)
+  2. docker-compose up --build -d
+
